@@ -129,7 +129,7 @@ const loginUser = asyncHandler(async (req,res) => {
 
     const {email, password, username} = req.body
 
-    if(!username || !email)
+    if(!username && !email)
     {
         throw new ApiError(400, " username or password is required")
     }
@@ -207,7 +207,8 @@ const logoutUser = asyncHandler(async (req, res) => {
 
 })
 
-export {registerUser,
+export {
+    registerUser,
     loginUser,
     logoutUser,
 }
