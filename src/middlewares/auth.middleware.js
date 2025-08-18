@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken"
 import { User } from "../models/user.models.js";
 
 
-export const verifyJWT = asyncHandler(async(requestAnimationFrame, resizeBy, next) => {
+export const verifyJWT = asyncHandler(async(req, res, next) => {
 
 
     try {
